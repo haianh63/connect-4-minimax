@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"> 
+    <title>Connecting 4</title>
+</head>
+<body>
+    <div id="result"></div>
+    <div id="container">
+        <div id="board">
+            {% for i in range(42) %}
+                <div class="board-item"></div>
+            {% endfor%}
+        </div>
+        <div id="status">
+            <button onClick="window.location.reload();" id="restart">Play Again</button>
+            <p id="current-turn">Your Turn</p>
+            <p id="loading">AI is thinking....</p>
+        </div>
+    </div>
+</body>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</html>

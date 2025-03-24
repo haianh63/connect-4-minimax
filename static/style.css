@@ -1,0 +1,49 @@
+:root {
+    --item-size: 80px;
+    --column-gap: 30px;
+    --row-gap: 20px;
+}
+
+#result {
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    margin-block: 15px;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(7, var(--item-size));
+    column-gap: var(--column-gap);
+    row-gap: var(--row-gap);
+    background-color: rgb(0, 94, 255);
+    width: calc(7 * var(--item-size) + 6 * var(--column-gap));
+    padding: 30px 40px;
+    border-radius: 20px;
+    margin-inline: auto;
+}
+
+.board-item {
+    box-sizing: border-box;
+    width: var(--item-size);
+    height: var(--item-size);
+    border-radius: 50%;
+    background-color: white;
+    border: solid 1px black;
+    cursor: pointer;
+}
+
+#container {
+    margin-inline: auto;
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#loading {
+    visibility: hidden;
+}
+
+#restart {
+    visibility: hidden;
+}
