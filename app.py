@@ -16,7 +16,7 @@ def home():
 
 @app.route('/ai-move')
 def aiMove():
-    result = minimax(board, 7, -math.inf, math.inf, True)
+    result = minimax(board, 6, -math.inf, math.inf, True)
     move = result[0]
     dropPiece(board, move, AI_PIECE)
     return jsonify({"move": move}) 
