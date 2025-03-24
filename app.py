@@ -26,4 +26,4 @@ def humanMove(col):
     dropPiece(board, int(col), HUMAN_PIECE)
     return jsonify({"move": col})
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
